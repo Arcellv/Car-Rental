@@ -43,18 +43,18 @@ const Header = () => {
               <div className="header_top_left">
                 <span>Need Help?</span>
                 <span className="header_top_help">
-                  <i class="ri-phone-fill"></i> +90 533-884-0966
+                  <i className="ri-phone-fill"></i> +90 533-884-0966
                 </span>
               </div>
             </Col>
 
             <Col lg="6" md="6" sm="6">
               <div className="header_top_right d-flex align-items-center justify-content-end gap-3">
-                <Link to="#" className="d-flex align-items-center gap-1">
-                  <i class="ri-login-circle-line"></i>Log in
+                <Link to="/login" className="d-flex align-items-center gap-1">
+                  <i className="ri-login-circle-line"></i>Log in
                 </Link>
-                <Link to="#" className="d-flex align-items-center gap-1">
-                  <i class="ri-user-line"></i>Sign up
+                <Link to="/signup" className="d-flex align-items-center gap-1">
+                  <i className="ri-user-line"></i>Sign up
                 </Link>
               </div>
             </Col>
@@ -70,7 +70,7 @@ const Header = () => {
               <div className="logo">
                 <h1>
                   <Link to="/home" className="d-flex align-items-center gap-2">
-                    <i class="ri-roadster-fill"></i>
+                    <i className="ri-roadster-fill"></i>
                     <span>
                       Rent Car <br /> Service
                     </span>
@@ -82,7 +82,7 @@ const Header = () => {
             <Col lg="3" md="3" sm="4">
               <div className="header_location d-flex align-items-center gap-2">
                 <span>
-                  <i class="ri-earth-line"></i>
+                  <i className="ri-earth-line"></i>
                 </span>
                 <div className="header_location-content">
                   <h4>Northern Cyprus</h4>
@@ -111,7 +111,7 @@ const Header = () => {
             >
               <button className="header_btn btn">
                 <Link to="/contact">
-                  <i class="ri-phone-line"></i> Call Request
+                  <i className="ri-phone-line"></i> Call Request
                 </Link>
               </button>
             </Col>
@@ -124,7 +124,7 @@ const Header = () => {
         <Container>
           <div className="navigation_wrapper d-flex align-items-center justify-content-between">
             <span className="mobile_menu">
-              <i class="ri-menu-line" onClick={toggleMenu}></i>
+              <i className="ri-menu-line" onClick={toggleMenu}></i>
             </span>
 
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
@@ -148,7 +148,7 @@ const Header = () => {
               <div className="search_box">
                 <input type="text" placeholder="Search" />
                 <span>
-                  <i class="ri-search-line"></i>
+                  <i className="ri-search-line"></i>
                 </span>
               </div>
             </div>

@@ -10,6 +10,8 @@ import Blogs from '../pages/Blogs'
 import BlogDetails from '../pages/BlogDetails'
 import NotFound from '../pages/NotFound'
 import Contact from '../pages/Contact'
+import Login from '../pages/Login';
+import SignUp from '../pages/SignUp';
 
 const Routers = () => {
   return (
@@ -23,6 +25,8 @@ const Routers = () => {
       <Route path="blogs/:slug" element={<BlogDetails />} />
       <Route path="Contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
     </Routes>
   );
 }
