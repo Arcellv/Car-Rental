@@ -203,3 +203,37 @@
         display: block;
     }
 }
+
+/* Keep auth links visible on all devices */
+.auth-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+/* Optional hover effect */
+.auth-link:hover {
+  color: #f9a826;
+}
+
+/* Mobile auth links inside menu */
+.mobile_auth_links a {
+  color: #000d6b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.mobile_auth_links a:hover {
+  color: #f9a826;
+}
+
+/* Ensure mobile menu auth links are hidden on desktop */
+@media only screen and (min-width: 845px) {
+  .mobile_auth_links {
+    display: none !important;
+  }
+}
+

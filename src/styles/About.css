@@ -1,12 +1,29 @@
-@media only screen  and (max-width: 992px) {
-    .page_content h2{
+.page_section {
+    padding-top: 40px; /* less space above content */
+    padding-bottom: 60px; /* optional bottom padding */
+}
+
+.page_content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px; /* reduce gap between heading and paragraphs */
+}
+
+.page_content p {
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 992px) {
+    .page_content h2 {
         font-size: 1.5rem;
     }
 }
 
+@media only screen and (max-width: 844px) {
+    .page_img {
+        display: none;
+    }
 
-@media only screen  and (max-width: 844px) {
-    .page_img{
-        display:none;
+    .page_content {
+        text-align: center;
     }
 }

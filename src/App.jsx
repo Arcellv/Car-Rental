@@ -1,43 +1,37 @@
-// src/components/layout/Layout.jsx
 import React from "react";
-import { useLocation, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import Home from "./pages/Home";
+import Layout from "./components/layout/Layout";
+import AuthLayout from "./components/layout/AuthLayout";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
-// Import other pages similarly
 
-const Layout = () => {
-  const location = useLocation();
-
-  // Paths where you don't want header/footer
-  const noHeaderFooterPaths = ["/login", "/signup"];
-
-  const hideHeaderFooter = noHeaderFooterPaths.includes(location.pathname.toLowerCase());
-
+function App() {
   return (
-    <>
-      {!hideHeaderFooter && <Header />}
+    <Routes>
+      {/* Auth pages without header/footer */}
+      <Route
+        path="/login"
+        element={
+          <AuthLayout backgroundColor="#041f88">
+            <Login />
+          </AuthLayout>
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+          <AuthLayout backgroundColor="#f9a826">
+            <SignUp />
+          </AuthLayout>
+        }
+      />
 
-      <main>
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />
-
-          {/* Add other routes */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-
-          {/* Add NotFound or other routes here */}
-        </Routes>
-      </main>
-
-      {!hideHeaderFooter && <Footer />}
-    </>
+      {/* Pages with header/footer */}
+      <Route path="/*" element={<Layout />} />
+    </Routes>
   );
-};
+}
 
-export default Layout;
+export default App;

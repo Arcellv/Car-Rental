@@ -12,10 +12,10 @@ const AboutSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      style={{ marginTop: "280px" }}
     >
       <Container>
-        <Row>
+        <Row className="align-items-center">
+          {/* Text Content */}
           <Col lg="6" md="6">
             <div className="about_section-content">
               <h4 className="subtitle_section">About us</h4>
@@ -28,29 +28,36 @@ const AboutSection = () => {
                 Doloribus ullam tempora reprehenderit cum?
               </p>
 
-              <div className="about_features d-flex align-items-center">
+              <p className="description_section">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Veniam consectetur beatae dolorum rerum architecto suscipit.
+                Doloribus ullam tempora reprehenderit cum?
+              </p>
+
+              <div className="about_features d-flex align-items-center gap-3">
                 <p className="section_description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Lorem, ipsum dolor sit amet
+                  <i className="ri-checkbox-circle-line"></i> High-quality vehicles
                 </p>
                 <p className="section_description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Lorem, ipsum dolor sit amet
+                  <i className="ri-checkbox-circle-line"></i> Affordable prices
                 </p>
               </div>
 
-              <div className="about_features d-flex align-items-center">
+              <div className="about_features d-flex align-items-center gap-3 mt-3">
                 <p className="section_description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Lorem, ipsum dolor sit amet
+                  <i className="ri-checkbox-circle-line"></i> Easy booking
                 </p>
                 <p className="section_description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Lorem, ipsum dolor sit amet
+                  <i className="ri-checkbox-circle-line"></i> 24/7 support
                 </p>
               </div>
             </div>
           </Col>
 
+          {/* Image */}
           <Col lg="6" md="6">
             <div className="about_img">
-              <img src={Img} alt="about" className="w-100" />
+              <img src={Img} alt="about" className="w-100 rounded-3" />
             </div>
           </Col>
         </Row>

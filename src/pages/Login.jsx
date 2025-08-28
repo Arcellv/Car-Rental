@@ -1,74 +1,31 @@
 // src/pages/Login.jsx
 import React from "react";
-import { Container, Row, Col, Form, FormGroup, Input, Button } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Form, FormGroup, Input, Label, Button } from "reactstrap";
 import AuthLayout from "../components/layout/AuthLayout";
-import "../styles/Login-SignUp.css";
+import "../styles/Login.css";
 
 const Login = () => {
   return (
-    <AuthLayout backgroundColor="#041f88"> {/* Blue background */}
-      <Container>
-        <Row className="justify-content-center">
-          <Col lg="5" md="7" sm="10">
-            <div
-              className="p-5"
-              style={{
-                background: "white",
-                borderRadius: "10px",
-                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.15)",
-              }}
-            >
-              <h4 className="title_section text-center mb-4">Welcome Back</h4>
-              <h6 className="subtitle_section text-center mb-4">Login to continue</h6>
+    <AuthLayout backgroundColor="#f9f9f9">
+      <div className="login_card">
+        <h2 className="form_title">Login</h2>
+        <Form>
+          <FormGroup>
+            <Label for="email">Email</Label>
+            <Input type="email" id="email" placeholder="Enter your email" />
+          </FormGroup>
 
-              <Form>
-                <FormGroup className="mb-3">
-                  <Input
-                    type="text"
-                    placeholder="Email or Username"
-                    required
-                    autoComplete="username"
-                  />
-                </FormGroup>
+          <FormGroup>
+            <Label for="password">Password</Label>
+            <Input type="password" id="password" placeholder="Enter your password" />
+          </FormGroup>
 
-                <FormGroup className="mb-4">
-                  <Input
-                    type="password"
-                    placeholder="Password"
-                    required
-                    autoComplete="current-password"
-                  />
-                </FormGroup>
-
-                {/* Button with swapped color */}
-                <Button
-                  type="submit"
-                  style={{
-                    backgroundColor: "#f9a826", // Login button uses SignUp color
-                    color: "#fff",
-                    border: "none",
-                    width: "100%",
-                  }}
-                >
-                  Login
-                </Button>
-
-                <p className="text-center description_section mt-3">
-                  Forgot password? <Link to="/forgot-password">Reset</Link>
-                </p>
-
-                <p className="text-center description_section">
-                  Don't have an account?{" "}
-                  <Link to="/signup" style={{ color: "#f9a826", fontWeight: "600" }}>
-                    Sign up
-                  </Link>
-                </p>
-              </Form>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+          <Button className="login_btn" type="submit">Login</Button>
+        </Form>
+        <p className="form_footer">
+          Don’t have an account? <a href="/signup">Sign Up</a>
+        </p>
+      </div>
     </AuthLayout>
   );
 };

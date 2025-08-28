@@ -1,17 +1,14 @@
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-
-import React from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
-import Home from '../pages/Home'
-import About from '../pages/About'
-import CarList from '../pages/CarList'
-import CarDetails from '../pages/CarDetails'
-import Blogs from '../pages/Blogs'
-import BlogDetails from '../pages/BlogDetails'
-import NotFound from '../pages/NotFound'
-import Contact from '../pages/Contact'
-import Login from '../pages/Login';
-import SignUp from '../pages/SignUp';
+import Home from "../pages/Home";
+import About from "../pages/About";
+import CarList from "../pages/CarList";
+import CarDetails from "../pages/CarDetails";
+import Blogs from "../pages/Blogs";
+import BlogDetails from "../pages/BlogDetails";
+import Contact from "../pages/Contact";
+import NotFound from "../pages/NotFound";
 
 const Routers = () => {
   return (
@@ -23,12 +20,10 @@ const Routers = () => {
       <Route path="cars/:slug" element={<CarDetails />} />
       <Route path="blogs" element={<Blogs />} />
       <Route path="blogs/:slug" element={<BlogDetails />} />
-      <Route path="Contact" element={<Contact />} />
+      <Route path="contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<SignUp />} />
     </Routes>
   );
-}
+};
 
-export default Routers
+export default Routers;
